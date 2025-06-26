@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tasty Tales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Updated header block with logo above title -->
+  <div class="header-logo-block">
+    <div class="logo-icon">🍽</div>
+    <h1 class="main-title">Tasty Tales</h1>
+    <div class="subtitle">❝ Every recipe tells a story. ❞</div>
+  </div>
+
+  <div id="foodContainer" class="food-list"></div>
+
+  <div id="recipeDetails" class="recipe-details">
+    <div class="details-card">
+      <h2 id="recipeTitle"></h2>
+      <img id="recipeImage" src="" alt="Recipe Image" />
+      <div class="prep-info">
+        <strong>Preparation Time:</strong> <span id="prepTime"></span> minutes <br />
+        <strong>Servings:</strong> <span id="servings"></span> people
+      </div>
+      <div class="btn-group">
+        <button onclick="toggleIngredients()">Show Ingredients</button>
+        <div id="ingredientsList" class="hidden"></div>
+        <button onclick="toggleSteps()">Show Steps</button>
+        <div id="stepsList" class="hidden"></div>
+        <button onclick="startCooking()">Start Cooking</button>
+        <button onclick="printRecipe()">🖨 Print</button>
+      </div>
+      <div id="timerDisplay" class="hidden">⏱ Time Left: <span id="timeText"></span></div>
+      <progress id="timerLine" class="hidden" value="0" max="100"></progress>
+      <button onclick="goBack()" style="margin-top: 1rem;">🔙 Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
